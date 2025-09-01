@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Archivo rojo</title>
+  <link rel="stylesheet" href="estilos.css" />
+  
+</head>
+<body>
+<div class="contenedor-img" id="fondo">
+  <button id="scrollBtn"></button>
+
+  <img src="img/opcion2.jpg" alt="Imagen extensa" id="imagenLarga" class="imagen" />
+
+  <!-- Cuadrados activadores -->
+  <!-- Visor flotante (imagen emergente) -->
+  <div id="visor"></div>
+
+  <div class="cuadro" id="cuadro1"
+     onclick="mostrarImagen('img/foto1.jpg', '2950px', '14%', '400px', '600', 'img/foto1a.png')"></div>
+
+<div class="cuadro" id="cuadro2"
+     onclick="mostrarImagen('img/foto2.jpg', '2700px', '14%', '350px', '500', 'img/foto2a.png')"></div>
+
+<div class="cuadro" id="cuadro3"
+     onclick="mostrarImagen('img/foto3.jpg', '2658px', '69%', '400px', '500', 'img/foto3b.png')"></div>
+
+<div class="cuadro" id="cuadro4"
+     onclick="mostrarImagen('img/foto4.jpg', '2850px', '41%', '400px', '500', 'img/foto4a.png')"></div>
+
+<div class="cuadro" id="cuadro5"
+     onclick="mostrarImagen('img/foto5.jpg', '2600px', '28%', '620px', '300', 'img/foto5a.png')"></div>
+
+<div class="cuadro" id="cuadro6"
+     onclick="mostrarImagen('img/foto6.jpg', '2840px', '56%', '620px', '300', 'img/foto6a.png')"></div>
+
+<div class="cuadro" id="cuadro7"
+     onclick="mostrarImagen('img/foto7.jpg', '2615px', '56%', '350px', '500', 'img/foto7a.png')"></div>
+
+<div class="cuadro" id="cuadro8"
+     onclick="mostrarImagen('img/foto8.jpg', '2650px', '80%', '620px', '300', 'img/foto8a.png')"></div>
+
+<div class="cuadro" id="cuadro9"
+     onclick="mostrarImagen('img/foto9.jpg', '3000px', '85%', '400px', '500', 'img/foto9a.png')"></div>
+
+<div class="cuadro" id="cuadro10"
+     onclick="mostrarImagen('img/foto10.jpg', '2900px', '28%', '300px', '400', 'img/foto10a.png')"></div>
+
+</div>
+</div>
+
+<!-- Visor flotante -->
+<div id="visor" style="text-align:center;"></div>
+<button onclick="mostrarArchivoCompleto()" style="position:fixed; bottom:10px; right:10px; z-index:9999; background:red; color:white; padding:0.5rem 1rem; border:none;">
+📂 Ver todas las voces
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>

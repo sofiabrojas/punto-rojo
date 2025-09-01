@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  font-family: sans-serif;
+  color: white;
+}
+
+.contenedor-img {
+  position: relative; /* ¡Esto es clave para posicionar elementos dentro! */
+  width: 100%;
+}
+
+.imagen {
+  width: 100%;
+  height: 3300px; /* O el largo que quieras */
+  object-fit: cover; /* O 'contain' si querés que se ajuste sin recortarse */
+  display: block;
+}
+
+
+/* Botón dentro de la imagen */
+#scrollBtn {
+  position: absolute;
+  top: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: crimson;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 10;
+
+  transition: all 0.5s ease;
+}
+
+#scrollBtn:hover {
+  background-color: rgb(255, 0, 0);
+  color: black;
+  box-shadow: 0 0 15px rgba(75, 74, 72, 0.6);
+  transform: translateX(-50%) scale(1.05);
+}
+
+/* Estilo general para los cuadrados */
+.cuadro {
+  position: absolute;
+  width: 99px;
+  height: 84px;
+  background-color: rgb(34, 33, 33);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  z-index: 9;
+}
+
+.cuadro:hover {
+  transform: scale(1.1);
+ box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); /* resplandor rojo potente */
+}
+
+
+/* Posiciones personalizadas */
+#cuadro1  { top: 2955px;  left: 8%; }
+#cuadro2  { top: 2620px;  left: 8%; }
+#cuadro3  { top: 2658px;  left: 69%; }
+#cuadro4  { top: 2850px;  left: 41%; }
+#cuadro5  { top: 2500px; left: 28%; }
+#cuadro6  { top: 2840px; left: 56%; }
+#cuadro7  { top: 2515px; left: 56%; }
+#cuadro8  { top: 2450px; left: 89%; }
+#cuadro9  { top: 3115px; left: 89%; }
+#cuadro10 { top: 3160px; left: 28%; }
+
+#visor {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  padding: 1rem;
+  display: none;
+}
+
+#visor img {
+  max-width: none;
+  height: auto;
+  box-shadow: 0 0 20px rgba(255,0,0,0.5);
+  border: 2px solid white;
+  border-radius: 6px;
+}
+
+
+/* Animación suave */
+@keyframes fadeinVisor {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeinImagen {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+
+#opinionesMostradas {
+  position: relative;
+  min-height: 220px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  overflow: visible;
+  z-index: 100;
+}
+
+#opinionesMostradas div {
+  position: absolute;
+  animation: fadeinVoz 1.2s ease;
+}
+
+@keyframes fadeinVoz {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
